@@ -1,4 +1,4 @@
-<img src="wikitips.png" width="200" height="400" />
+<img src="wikitips.png" width="800" height="400" />
 # Wikitips
 WikiTips is a very simple to use library that extracts semantic clues from DBPedia (The knowledge base system built from Wikipedia's data).
 

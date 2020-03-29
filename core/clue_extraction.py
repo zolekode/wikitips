@@ -85,7 +85,7 @@ class DBPClueExtractor:
         return result
 
     def __get_value(self, dictionary, key: str) -> str:
-        if key in dictionary:
+        if dictionary is not None and key in dictionary:
             return dictionary[key]
         return ""
 
@@ -97,16 +97,18 @@ class DBPClueExtractor:
 
     def __get_values_from_objects(self, dictionary, super_key: str, sub_key: str) -> list:
         if super_key in dictionary:
-            classes = list()
-            if sub_key in dictionary[super_key]:
-                classes = dictionary[super_key][sub_key]
-                if not isinstance(classes, list) and isinstance(classes, OrderedDict):
-                    classes = [classes]
-            return self.__extract_classes_from_list(classes)
+            results = list()
+            if dictionary[super_key] is not None and sub_key in dictionary[super_key]:
+                results = dictionary[super_key][sub_key]
+                if not isinstance(results, list) and isinstance(results, OrderedDict):
+                    results = [results]
+            return self.__extract_classes_from_list(results)
         return list()
 
     def __extract_classes_from_list(self, classes: list) -> list:
         results = list()
+        if not isinstance(classes, list):
+            return results
         for class_object in classes:
             results.append(self.__get_value(class_object, self.__LABEL))
         return results

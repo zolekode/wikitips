@@ -1,3 +1,4 @@
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
 # Wikitips
 WikiTips is a very simple to use library that extracts semantic clues from DBPedia (The knowledge base system built from Wikipedia's data).
 

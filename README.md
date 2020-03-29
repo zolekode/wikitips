@@ -1,4 +1,4 @@
-<img src="wikitips.png"/>
+<img src="wikidata.png"/>
 
 # Wikitips
 

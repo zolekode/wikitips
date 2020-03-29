@@ -1,5 +1,7 @@
 <img src="wikitips.png"/>
+
 # Wikitips
+
 WikiTips is a very simple to use library that extracts semantic clues from DBPedia (The knowledge base system built from Wikipedia's data).
 
 Currently there is no pip package so just go ahead and clone or download it into your own projects.
